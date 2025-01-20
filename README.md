@@ -7,6 +7,16 @@
 
 ![Modular LLM Architecture Diagram](assets/multi_agent_workflow_diagram.png)
 
+The diagram illustrates the key components of the system, including the Conversation Manager, Router, LLM Manager, and specialized agents.
+
+---
+
+## Core Features
+- Modular multi-agent design.
+- Dynamic LLM integration with support for multiple models.
+- Separation of concerns for improved maintainability.
+
+---
 ### Introduction
 
 In the era of Large Language Models (LLMs), designing systems that handle diverse tasks with scalability and flexibility is a growing challenge. The cognitive architecture presented here leverages modular design principles to build a robust multi-agent system, featuring clear separation of responsibilities and dynamic LLM integration. This blog explores the architectural details, using the attached diagram as a guide.
