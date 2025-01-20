@@ -1,6 +1,12 @@
 # Modular-LLM-Architecture
 **Exploring the cognitive architecture and design of a multi-agent system leveraging Large Language Models (LLMs) for scalable workflows.**
 
+
+
+## Architecture Diagram
+
+![Modular LLM Architecture Diagram](assets/multi_agent_workflow_diagram.png)
+
 ### Introduction
 
 In the era of Large Language Models (LLMs), designing systems that handle diverse tasks with scalability and flexibility is a growing challenge. The cognitive architecture presented here leverages modular design principles to build a robust multi-agent system, featuring clear separation of responsibilities and dynamic LLM integration. This blog explores the architectural details, using the attached diagram as a guide.
