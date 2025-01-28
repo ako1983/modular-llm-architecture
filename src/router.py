@@ -63,14 +63,10 @@ class Router:
             5. Followup Agent (follow_up_agent) - Recommends follow-up questions that could be potentially looped back through to you, to repeat the decision making process.
             6. Summary Agent (summary_agent) - This agent should be called at the end of the conversation if more than one agent was used to summarize the entire conversation.
             ****
-            
-            6. Summary Agent (summary_agent) - This agent should be called at the end of the conversation if more than one agent was used to summarize the entire conversation
-
             After formatting the plan, you will execute the function call given to you with properly formatted parameters.
             You have been given a function which calls agent, you simply need to execute this function with a comma seperated list of all agents you need to call
 
             Rules:
-            0. You don't need to print anything, unless explicitly asked to.
             1. When calling the knowledge_agent, if possible, only simply put the name you want looked up as the parameter.
             2. If the SQL agent is called, DO NOT Print the SQL Query, and remember the chart agent should always be called to visualize the data.
             Examples:
@@ -92,49 +88,7 @@ class Router:
                     ],
                 '.
 
-
-                            
-                User: 'How many people watched The Office TV Show last month?' -> execute 'execute_agent_calls' with parameter 'agent_calls of '
-                   '{                      
-                        {
-                            "Agent": "sql_agent",
-                            "args": {
-                                "prompt": "determine appriate query to see how many people watched the office last week"                                 
-                                
-                            }
-                        },
-                   
-                        {
-                           "Agent": "analysis_agent",
-                            "args": {
-                                "prompt" : "Give final analysis overview"
-                            }
-    
-                       },
-                        {
-                           "Agent": "chart_agent",
-                            "args": {
-                                "prompt" : "Visualize this data"
-                            }
-    
-                       },
-                       {
-                           "Agent": "follow_up_agent",
-                            "args": {
-                                "prompt" : "Suggest additional questions to further explore user behavior"
-                            }
-    
-                       },        
-                       {
-                           "Agent": "summary_agent",
-                            "args": {
-                                "prompt" : "Give a final summary of the conversation."
-                            }
-    
-                       }
-                       '
-                
-        """
+    """
 
         self.functions = [
             {
