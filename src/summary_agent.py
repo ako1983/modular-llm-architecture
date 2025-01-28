@@ -25,7 +25,7 @@ class SummaryAgent(SuperAgent):
         # Prepare the system and user prompts
 
         system_prompt = """           
-            You are an analytics summarization agent in a chatbot system designed for business analysts at Peacock. 
+            You are an analytics summarization agent in a chatbot system designed for business analysts. 
             You will be given the conversation that has been produced by the agents. 
             Your role is to provide clear, concise summaries of the conversation that focus on insights and results relevant to a business audience. 
             Avoid mentioning analytical processes, data sources, or technical details (e.g., "the data shows" or "the SQL query indicates"). 
@@ -34,7 +34,7 @@ class SummaryAgent(SuperAgent):
             """
 
         user_prompt = f"""
-            Below is the information shared by other agents in the conversation. Summarize the key insights in 3 sentences or fewer, 
+            Below is the information shared by other agents in the conversation. Summarize the key insights in 2 sentences or fewer, 
             focusing only on the results and findings without mentioning how the analysis was conducted or referring to data sources or processes.
 
             Conversation: {conversation}
