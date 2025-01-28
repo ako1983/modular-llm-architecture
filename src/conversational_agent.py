@@ -25,8 +25,6 @@ logger.info("This is an info log from the current module.")
 artifacts_dir = Path(curr_dir.parents[0] / "artifacts/")
 
 ### Acts as a manager agent by routing which agents need to be executed
-
-
 class ConversationalAgent(SuperAgent):
     def __init__(
         self,
@@ -121,8 +119,6 @@ class ConversationalAgent(SuperAgent):
                         print(f"Pre-Validation Query Result: {query_result}")
                         sql_query, query_result, description = self.sql_debugger.validate_and_fix_sql(sql_query, original_user_question, query_result)
 
-                    
-                            
                         conversation.append([f"SQL Query Results: {query_result}"])
                         conversation.append([f"SQL Query: {sql_query}"])
                         result += f"\nSQL Query Results:\n{query_result}"
