@@ -1,0 +1,24 @@
+# Core dependencies
+openai
+langchain
+langchainhub
+langgraph
+tiktoken
+
+# Database & Querying
+google-cloud-bigquery
+sqlalchemy
+
+# Web Framework & API
+fastapi
+uvicorn
+
+# Task Queue & Async Processing
+celery
+redis
+asyncio
+
+# Data Processing & Utility Libraries
+pandas
+numpy
+protobuf  # Needed for compatibility with BigQuery and other APIs
