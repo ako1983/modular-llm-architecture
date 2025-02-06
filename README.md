@@ -38,22 +38,27 @@ In the era of Large Language Models (LLMs), designing systems that handle divers
    - Supports dynamic model selection and configuration changes, such as adjusting temperature or choosing specific LLMs for tasks.
    - Ideas for caching and small-model fallback mechanisms have been proposed but are not yet implemented.
 
----
 
 ### Specialized Agents
 
 Each agent is designed with a specific role, ensuring a clear separation of concerns:
 
 - **SQL Agent (Natural Language to SQL):** Converts user prompts into SQL queries, currently interacting with the **Database Schema via prompt injection** to fetch metadata. In production, this will transition to a graph-based Retrieval-Augmented Generation (RAG) system for enhanced flexibility and scalability.
-- **Analyser Agent (Data Analysis):** Analyzes structured or unstructured data to provide insights. Future enhancements include integrating LLM results with business data from platforms like Slack, Microsoft Teams, and OneDrive.
-- **Summary Agent (Result Compilation):** Summarizes outputs from various agents, compiling user-friendly reports. It always runs at the end, providing concise summaries to ensure clarity.
+
 - **SQL Debugging Agent:** Debugs and corrects SQL queries, ensuring accurate execution. It refines queries up to three times, addressing issues like spelling errors or incomplete logic, to ensure meaningful outputs.
+
+- **Analyser Agent (Data Analysis):** Analyzes structured or unstructured data to provide insights. Future enhancements include integrating LLM results with business data from platforms like Slack, Microsoft Teams, and OneDrive.
+
+
 - **Charting Agent:** Writes Vega specifications for data visualization.
 - **Vega Debugging Agent:** Corrects and validates Vega JSON specifications for accurate visual rendering.
 - **Knowledge Agent:** Retrieves answers from document repositories, relying on the **Document RAG** for context. It addresses business-specific queries like defining terms such as 'churn' at Peacock, ensuring concise and clear summaries.
 - **Follow-Up Agent:** Engages with users to provide iterative feedback and refine responses. It also suggests 2-3 similar analyses to help users explore related questions.
 - **Clarification Agent:** Ensures the highest level of accuracy by detecting ambiguity and prompting for clarification. For instance, it can inquire, "What do you consider a top show? Should it be based on total hours viewed, other metrics, or specific time periods like a calendar month?"
 - **Note Agent:** Streamlines analyses by capturing preferences like focusing on Android devices in New York state. This eliminates repetitive specifications, ensuring appropriate SQL queries and tailored visualizations.
+
+- **Summary Agent (Result Compilation):** Summarizes outputs from various agents, compiling user-friendly reports. It always runs at the end, providing concise summaries to ensure clarity.
+
 
 ---
 
