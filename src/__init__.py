@@ -12,7 +12,7 @@
 # api_key = os.getenv("AZURE_GPT_KEY")
 # api_base = os.getenv("AZURE_API_BASE")
 # api_version = "2023-03-15-preview"
-# gpt_deployment = "NBCU-D2C-Peacock-ODR-GPT4"
+# gpt_deployment = "XXXXXXXXX"
 
 
 # __all__ = [
